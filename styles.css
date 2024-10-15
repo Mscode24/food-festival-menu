@@ -6,7 +6,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: black; /* Black background */
+    color: white; /* White text color for contrast */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,10 +23,32 @@ body {
     height: auto;
     border: 10px solid transparent;
     border-radius: 15px;
-    transition: border-color 0.3s ease;
+    animation: glow 3s infinite alternate; /* Adjust duration as needed */
 }
 
-.menu-image:hover {
-    border-color: rgba(255, 204, 0, 0.7); /* Glow color */
-    box-shadow: 0 0 20px rgba(255, 204, 0, 0.7); /* Glowing effect */
+@keyframes glow {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 5px transparent;
+    }
+    20% {
+        border-color: rgba(255, 0, 0, 0.7); /* Red */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    }
+    40% {
+        border-color: rgba(0, 255, 0, 0.7); /* Green */
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+    }
+    60% {
+        border-color: rgba(0, 0, 255, 0.7); /* Blue */
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+    }
+    80% {
+        border-color: rgba(255, 204, 0, 0.7); /* Yellow */
+        box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+    }
+    100% {
+        border-color: rgba(255, 0, 255, 0.7); /* Magenta */
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+    }
 }
