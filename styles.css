@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.menu-image {
+    max-width: 100%;
+    height: auto;
+    border: 10px solid transparent;
+    border-radius: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.menu-image:hover {
+    border-color: rgba(255, 204, 0, 0.7); /* Glow color */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.7); /* Glowing effect */
+}
